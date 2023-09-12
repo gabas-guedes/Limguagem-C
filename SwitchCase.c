@@ -44,7 +44,7 @@ int main() {
             printf("Dezembro\n");
             break;
         default:
-        Printf ("mes invalido");
+        printf ("mes invalido");
 
 }
     return 0;

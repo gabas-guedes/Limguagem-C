@@ -2,15 +2,15 @@
 
 int main(){
 
-
-    for(í = 0; í<= 2; i++){
-        printf("valor de í: %d!!!!\n", í);
+    int i;
+    for(i = 0; i<= 2; i++){
+        printf("valor de i: %d!!!!\n", i);
 
     }
 
 
 
-    print("saiu do for. valor de í: %d\n" í);
+    printf("saiu do for. valor de i: %d\n", i);
 
     return 0;
 }
