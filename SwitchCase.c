@@ -1,12 +1,15 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
 
     int mes;
+    while (1)
+    {
+        scanf("%d", &mes);
 
-    scanf("%d", &mes);
-
-    switch(mes){
+        switch (mes)
+        {
         case 1:
             printf("Janeiro\n");
             break;
@@ -44,8 +47,7 @@ int main() {
             printf("Dezembro\n");
             break;
         default:
-        printf ("mes invalido");
-
-}
-    return 0;
+            printf("mes invalido");
+        }
+    }
 }
