@@ -2,8 +2,6 @@
 
 // void main() {
 //     int a = 88, b = 22;
-
-    
 //      printf("Digite o numero inteiro: ");
 //      scanf("%d%d", &a, &b);
 
@@ -30,8 +28,4 @@ void main() {
            soma = soma + 7;
     }
     printf (" a soma %d", soma);
-
-
-
-
 }
