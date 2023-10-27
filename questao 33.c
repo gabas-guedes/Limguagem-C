@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <string.h>
 
 int main()
 {
@@ -26,7 +26,7 @@ int main()
     }
     scanf("%s", calculo);
 
-    if (calculo[0] == 'soma')
+    if (strcmp(calculo, "soma")==0)
     {
         for (linha = 0; linha <= 3; linha++)
         {

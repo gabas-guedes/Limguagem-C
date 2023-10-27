@@ -1,118 +1,61 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main()
 {
-    int A[4][4];
-    int B[4][4];
-    int result[4][4];
-    char operation[4];
 
-    // Lê a primeira matriz (A)
-    for (int i = 0; i < 4; i++)
+    int matriza[4][4];
+    int matrizb[4][4];
+    int matrizr[4][4];
+    char calculo[4];
+    int linha, coluna;
+
+    for (linha = 0; linha <= 3; linha++)
     {
-        for (int j = 0; j < 4; j++)
+        for (coluna = 0; coluna <= 3; coluna++)
         {
-            scanf("%d", &A[i][j]);
+            scanf("%d", &matriza[linha][coluna]);
         }
     }
-}
-}
-
-// Lê a segunda matriz (B)
-
-for (int i = 0; i < 4; i++)
-{
-
-    for (int j = 0; j < 4; j++)
+    for (linha = 0; linha <= 3; linha++)
     {
-
-        scanf("%d", &B[i][j]);
-    }
-}
-}
-}
-// Lê a operação
-scanf("%s", operation);
-
-// Realiza a operação e armazena o resultado em 'result'
-for (int i = 0; i < 4; i++)
-{
-    for (int j = 0; j < 4; j++)
-    {
-        if (operation[0] == 'soma')
+        for (coluna = 0; coluna <= 3; coluna++)
         {
-            result[i][j] = A[i][j] + B[i][j];
+            scanf("%d", &matrizb[linha][coluna]);
         }
-        result[i][j] = A[i][j] + B[i][j];
-
-        result[i][j] = A[i][j] + B[i][j];
-
-                result[i][j] = A[i][j] + B[i
-else if (operation[0] == 'sub') {
-            result[i][j] = A[i][j] - B[i][j];
-            } 
-                result[i][j] = A[i][j] - B[i][j];
-           
-
-                result[i][j] = A[i][j] - B[i
-
-                result[i][j] = A[i][j] - B
-
-                result[i][j] = A[i][j]
-
-                result[i][j] = A[i][j
-
-                result[i][j] =
-
-                result
-else if (operation[0] == 'mult') {
-                result[i][j] = 
-                result[i
-
-                result
-0;
-                for (int k = 0; k < 4; k++) {
-                result[i][j] += A[i][k] * B[k][j];
-                }
+    }
+    scanf("%s", calculo);
+     for (linha = 0; linha <= 3; linha++)
+        {
+            for (coluna = 0; coluna <= 3; coluna++)
+            { 
+                matrizr[linha][coluna]=0;
+               for(int k = 0; k <= 3; k++){
+               
+                matrizr[linha][coluna] += matriza[linha][k] * matrizb[k][coluna];
+        
             }
-    }
+        }
+        }
+        for (linha = 0; linha <= 3; linha++)
+        {
+            for (coluna = 0; coluna <= 3; coluna++)
+
+            {
+                printf("%4d", matrizr[linha][coluna]);
+            }
+
+            printf("\n");
+        }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        
+    return 0;
 }
-
-result[i][j] += A[i][k] * B[k][j];
-}
-}
-}
-
-result[i][j] += A[i][k] * B[k][j];
-}
-}
-}
-
-result[i][j] += A[i][k] * B[k][j];
-}
-}
-
-                    result[i][j] += A[i][k] * B[k][
-
-                    result[i][j] += A[i][k]
-
-                    result[i][j] += A[i][k
-
-                    result[i][j] +=
-
-                    result[i][j]
-
-                    result[i][
-// Imprime o resultado
-    for (int i = 0; i < 4; i++) {
-    for (int j = 0; j < 4; j++)
-    {
-        printf("%4d", result[i][j]);
-    }
-
-    printf("\n");
-    }
-                    }
-
-                    return 0;
-                    }
