@@ -3,27 +3,44 @@
 int main()
 {
   int vetor[10];
-  int i, posicao;
+  int i, j;
 
   for (i = 0; i < 10; i++)
   {
     scanf("%d", &vetor[i]);
-    printf("%d ", vetor[i]);
+
+    if (i < 9)
+    {
+      printf("%d ", vetor[i]);
+    }
+    else
+    {
+      printf("%d", vetor[i]);
+    }
   }
   printf("\n");
   for (i = 9; i > 0; i--)
   {
-    for (posicao = 0; posicao < 10; posicao++)
+
+    for (j = 0; j < 10; j++)
     {
-      if (posicao < i)
+
+      if (j < i)
       {
-        vetor[posicao] = vetor[posicao] + vetor[posicao + 1];
-        printf("%d ", vetor[posicao]);
+        vetor[j] = vetor[j] + vetor[j + 1];
+
+        if (j < i - 1)
+        {
+          printf("%d ", vetor[j]);
+        }
+        else
+        {
+          printf("%d", vetor[j]);
+        }
       }
-    else if (posicao == i){
-      printf("\n");
     }
-    }
+    printf("\n");
   }
+
   return 0;
 }
