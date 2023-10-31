@@ -18,7 +18,7 @@ int main()
         {
             vetorb[i] = vetora[i] / 2;
         }
-        else if (vetorb[i] % 2 != 0)
+        else  
         {
             vetorb[i] = vetora[i] * 3;
         }

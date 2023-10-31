@@ -9,15 +9,14 @@ int main()
   {
     scanf("%d", &vetor[i]);
   }
-  menor = vetor[0];
-  for (i = 1; i < 20; i++)
-  {
+  menor = vetor[i];
+  
     if (vetor[i] < menor)
     {
       menor = vetor[i];
+      printf("%d", menor);
     }
-  }
-  menor = vetor;
-  printf("%d", menor);
+  
+  
   return 0;
 }

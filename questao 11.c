@@ -20,8 +20,10 @@ int main()
         vetor[posicao] = vetor[posicao] + vetor[posicao + 1];
         printf("%d ", vetor[posicao]);
       }
+    else if (posicao == i){
+      printf("\n");
     }
-    printf("\n");
+    }
   }
   return 0;
 }
