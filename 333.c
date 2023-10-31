@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <string.h>
 
 int main()
 {
@@ -25,37 +25,51 @@ int main()
         }
     }
     scanf("%s", calculo);
-     for (linha = 0; linha <= 3; linha++)
-        {
-            for (coluna = 0; coluna <= 3; coluna++)
-            { 
-                matrizr[linha][coluna]=0;
-               for(int k = 0; k <= 3; k++){
-               
-                matrizr[linha][coluna] += matriza[linha][k] * matrizb[k][coluna];
-        
-            }
-        }
-        }
+
+    if (strcmp(calculo, "soma") == 0)
+    {
         for (linha = 0; linha <= 3; linha++)
         {
             for (coluna = 0; coluna <= 3; coluna++)
-
             {
-                printf("%4d", matrizr[linha][coluna]);
+                matrizr[linha][coluna] = matriza[linha][coluna] + matrizb[linha][coluna];
             }
-
-            printf("\n");
         }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-        
+    }
+    else if (strcmp(calculo, "sub") == 0)
+    {
+        for (linha = 0; linha <= 3; linha++)
+        {
+            for (coluna = 0; coluna <= 3; coluna++)
+            {
+                matrizr[linha][coluna] = matriza[linha][coluna] - matrizb[linha][coluna];
+            }
+        }
+    }
+    else if (strcmp(calculo, "mult") == 0)
+    {
+        for (linha = 0; linha <= 3; linha++)
+        {
+            for (coluna = 0; coluna <= 3; coluna++)
+            {
+                matrizr[linha][coluna] = 0;
+                for (int k = 0; k <= 3; k++)
+                {
+
+                    matrizr[linha][coluna] += matriza[linha][k] * matrizb[k][coluna];
+                }
+            }
+        }
+    }
+    for (linha = 0; linha <= 3; linha++)
+    {
+        for (coluna = 0; coluna <= 3; coluna++)
+
+        {
+            printf("%4d", matrizr[linha][coluna]);
+        }
+
+        printf("\n");
+    }
     return 0;
 }

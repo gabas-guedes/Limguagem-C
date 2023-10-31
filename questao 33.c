@@ -26,7 +26,7 @@ int main()
     }
     scanf("%s", calculo);
 
-    if (strcmp(calculo, "soma")==0)
+    if (strcmp(calculo, "soma") == 0)
     {
         for (linha = 0; linha <= 3; linha++)
         {
@@ -35,18 +35,8 @@ int main()
                 matrizr[linha][coluna] = matriza[linha][coluna] + matrizb[linha][coluna];
             }
         }
-        for (linha = 0; linha <= 3; linha++)
-        {
-            for (coluna = 0; coluna <= 3; coluna++)
-
-            {
-                printf("%4d", matrizr[linha][coluna]);
-            }
-
-            printf("\n");
-        }
     }
-    else if (calculo[0] == 'sub')
+    else if (strcmp(calculo, "sub") == 0)
     {
         for (linha = 0; linha <= 3; linha++)
         {
@@ -55,16 +45,31 @@ int main()
                 matrizr[linha][coluna] = matriza[linha][coluna] - matrizb[linha][coluna];
             }
         }
+    }
+    else if (strcmp(calculo, "mult") == 0)
+    {
         for (linha = 0; linha <= 3; linha++)
         {
             for (coluna = 0; coluna <= 3; coluna++)
-
             {
-                printf("%4d", matrizr[linha][coluna]);
-            }
+                matrizr[linha][coluna] = 0;
+                for (int k = 0; k <= 3; k++)
+                {
 
-            printf("\n");
+                    matrizr[linha][coluna] += matriza[linha][k] * matrizb[k][coluna];
+                }
+            }
         }
+    }
+    for (linha = 0; linha <= 3; linha++)
+    {
+        for (coluna = 0; coluna <= 3; coluna++)
+
+        {
+            printf("%4d", matrizr[linha][coluna]);
+        }
+
+        printf("\n");
     }
     return 0;
 }
