@@ -9,25 +9,22 @@ int main()
     for (i = 0; i < 10; i++)
     {
         scanf("%d", &vetora[i]);
+        printf("%d ", vetora[i]);
     }
-    vetorb[i] = 0;
+    printf("\n");
+    vetora[i] = vetorb[i];
     for (i = 0; i < 10; i++)
     {
-
-        if (vetorb[i] % 2 == 0)
+        if (vetora[i] % 2 == 0)
         {
             vetorb[i] = vetora[i] / 2;
         }
-        else  
+        else
         {
             vetorb[i] = vetora[i] * 3;
         }
     }
-    for (i = 0; i < 10; i++)
-    {
-        printf("%d ", vetora[i]);
-    }
-    printf("\n");
+
     for (i = 0; i < 10; i++)
     {
         printf("%d ", vetorb[i]);
