@@ -1,15 +1,21 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main(){
-    
-    int a, b, soma;
+int main()
+{
+    char nome_time1[31];
+    int forca_time1 = 0;
 
-        scanf("%d%d", &a,&b);
+    // Leitura das informações do time 1
 
-        soma = a + b;
-        printf("SOMA = %d\n", soma);
+    scanf("%30s", nome_time1);
 
+    for (int i = 0; i < 11; i++)
+    {
+        char nome[31], posicao;
+        int forca;
 
+        scanf("%30s;%c;%d", nome, &posicao, &forca);
 
-    return 0;
+        printf("%30s;%c;%d", nome, posicao, forca);
+    }
 }
