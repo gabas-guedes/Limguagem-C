@@ -1,15 +1,9 @@
 #include <stdio.h>
-
-int main()
+#include <string.h>
+int romanoparadecimal(char romano)
 {
-
-    char romano[12];
-    int i;
-    int calculo = 0;
-    fgtes(romano[i]);
-    switch (romano[i])
+    switch (romano)
     {
-
     case 'I':
         return 1;
     case 'V':
@@ -27,19 +21,41 @@ int main()
     default:
         return 0;
     }
-    for (i = 0; romano[i] != '/ 0'; i++)
+}
+int main()
+{
+    char romano[12];
+    int i;
+    int total = 0;
+    gets(romano);
+    int tamanho = strlen(romano);
+    for (i = 0; i < tamanho; i++)
     {
-        if (romano[i] < romano[i + 1])
+
+        int decimal = romanoparadecimal(romano[i]);
+        if (romanoparadecimal(romano[i + 1]) > decimal)
         {
-            calculo -= romano[i];
+            total -= decimal;
         }
         else
         {
-            calculo += romano[i];
+            total += decimal;
         }
-        return calculo;
     }
-
-    printf("%d", calculo);
+    int totalbinario;
+    int notprintf0 = 0;
+    printf("%s na base 2: ", romano);
+    for (int j = 10; j >= 0; j--)
+    {
+        totalbinario = (total >> j) & 1;
+        if (totalbinario == 1 || notprintf0)
+        {
+            printf("%d", totalbinario);
+            notprintf0 = 1;
+        }
+    }
+    printf("\n");
+    printf("%s na base 10: %d\n", romano, total);
+    printf("%s na base 16: %x\n", romano, total);
     return 0;
 }
